@@ -4,242 +4,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web3 wallet where users can manage their crypto and fiat currenies">
     <title>Web3 wallet</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- <link rel="icon" type="image/x-icon" href="/favicon.ico"> -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <!-- <link rel="stylesheet" href="/fontawesome-free-6.6.0-web/css/all.css"> -->
-    <script src="/script.js"></script>
-    <script type="module">
+    <!-- <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
+    <link rel="stylesheet" href="/fontawesome-free-6.6.0-web/css/all.css">
+    <!-- <script type="module">
         import "./components/my-component.js";
-    </script>
+    </script> -->
 </head>
-<style>
-
-</style>
 
 <body>
 
     <!-------------- NAVBAR ---------------->
     <nav>
-        <div id="logo"><img src="./public/hp-logo-2400x2400-20220519-1.png" width="80" height="80" alt=""></div>
-        <ul class="nav-links">
-            <a href="">
-                <li class="nav-link">Home</li>
-            </a>
-            <a href="">
-                <li class="nav-link">Services</li>
-            </a>
-            <a href="">
-                <li class="nav-link">About Us</li>
-            </a>
-        </ul>
-        <a href=""><button>Sign Up</button></a>
-    </nav>
+        <h1>Cryptank.io</h2>
 
+            <ul class="nav-links">
+                <li class="nav-link">
+                    <a href="/">Home</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">Services</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">About Us</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">Attributes</a>
+                </li>
+            </ul>
+            <button class="signupButton">Get Started</button>
+            <span class="menu-icon-container">
+                <i class="menu-icon fas fa-bars"></i>
+            </span>
+
+
+    </nav>
     <!-------------- HERO SECTION ---------------->
 
-    <section class="hero-section">
-        <article>
-            <div class="hero-copy">
-                <h3>FREE DOWNLOAD</h3>
-                <span>
-                    <h1>Manage your crypto</h1>
-                    <h1>and your money</h1>
-                    <h1>with us</h1>
-
-                </span>
-                <span>
-
-                    <h3>buy and save your crypto money in this application</h3>
-                    <h3>
-                        and have an easy and fun experience
-                    </h3>
-                </span>
+    <main>
+        <section class="hero-section">
+            <div class="image-container">
+                <img class="hero-image" src="./public/mobile_crypto_wallet_trsnpnew.png" alt="" />
             </div>
-            <div class="hero-buttons">
-                <button id="download-button">Download App</button>
-                <button>Learn More </button>
+            <div>
+                <div class="hero-copy">
+                    <h2>FREE DOWNLOAD</h2>
+                    <span class="main-copy">
+                        <h1>Manage your money <br>and your crypto <br> in one place
+                        </h1>
+                    </span>
+
+
+
+                    <span class="supporting-copy">
+                        <h2>Manage your money and crypto securely with real-time insights. </h2>
+                        <h2>
+                            Trusted by thousands, for safe, smart financial management.
+                        </h2>
+                    </span>
+                </div>
+                <div class="hero-buttons">
+                    <button class="download-button">Download App</button>
+                    <button class="learnmore-button" style="display: flex;">Learn More <div class="icon-container"><i
+                                class="fas fa-arrow-right fa-rotate-45"></i>
+                        </div>
+                    </button>
+                </div>
+
+                <!-------------- RATING SECTION ---------------->
+                <section class="rating-section">
+                    <div class="rating-field">
+                        <p class="rating-value">500k+</p>
+                        <p class="rating-description">Users use our app</p>
+                    </div>
+                    <div class="rating-field">
+                        <p class="rating-value">4.9</p>
+                        <p class="rating-description">App stores rating</p>
+                    </div>
+                    <div class="rating-field">
+                        <p class="rating-value">500k+</p>
+                        <p class="rating-description">People Trust their funds with us</p>
+                    </div>
+                </section>
             </div>
-        </article>
-        <div class="hero-image">
-            <img src="./public/mobile_crypto_wallet_trsnp.png" width="700" height="" alt="">
-        </div>
 
-    </section>
+        </section>
 
-    <!-------------- RATING SECTION ---------------->
+    </main>
+
 </body>
 
+<!------------------ FOOTER ------------------->
 <footer>
-    <p id="footer">Developed with <i class="fas fa-heart"></i> by <a href="https://x.com/RoyChinwuba">DevRoy</a></p>
+    <a href="https://x.com/RoyChinwuba">
+        <p id="footer">Developed with <i class="fas fa-heart"></i> by DevRoy</p>
+    </a>
 </footer>
+<script src="script.js"></script>
 
 <script>
+    // This function checks if the current URL matches a file in your project.
+    function handle404() {
+        const validPaths = ['', '/', '/index.html', '/about.html', '/contact.html']; // List all valid paths here
+        const path = window.location.pathname;
+        console.log("Path is:", path)
 
+        if (!validPaths.includes(path)) {
+            window.location.href = '/404.html'; // Redirect to the custom 404 page
+        }
+    }
+    // Call the function to handle 404
+    handle404();
 </script>
-
-<style>
-    * {
-        padding: 0;
-        margin: 0;
-        font-size: 16px;
-    }
-
-    body {
-        background-color: rgb(45, 43, 43);
-        color: azure;
-        padding: 1em 4em;
-        font-family: Roboto, system-ui, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-
-    .fa-rotate-45 {
-        transform: rotate(-45deg);
-    }
-
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    h1 {
-        font-size: 4em;
-        font-weight: 500;
-    }
-
-    h3 {
-        font-size: 1.2em;
-        font-weight: 300;
-    }
-
-    .hero-section {
-        display: flex;
-        justify-content: space-between;
-
-    }
-
-    .hero-copy {
-        margin-bottom: 1em;
-        flex: 1;
-    }
-
-    .hero-image {
-        flex: 1;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .hero-image img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .hero-buttons button {
-        position: relative;
-        margin-right: 2em;
-        width: fit-content;
-        padding: 1em 2em;
-        border-radius: 2em;
-        transition: all 0.5s ease-in-out;
-    }
-
-    .hero-buttons button:nth-child(2):before {
-        content: " ";
-    }
-
-
-    .hero-buttons button:nth-child(2):after {
-        content: "\f061";
-        /* fa-arrow-right Unicode character */
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%) rotate(45deg);
-        opacity: 0;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .hero-buttons #download-button {
-        background-color: blueviolet;
-        /* border: 1px solid white; */
-    }
-
-    .hero-buttons button:nth-child(2):hover {
-        background-color: blueviolet;
-        padding-right: 40px;
-    }
-
-    .hero-buttons button:nth-child(2):hover:after {
-        right: 15px;
-        transform: translateY(-50%) scale(1.2);
-        opacity: 1;
-    }
-
-
-    .hero-buttons button:nth-child(2):hover+#download-button {
-        background-color: white;
-    }
-
-    ul {
-        list-style-type: none;
-    }
-
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-
-
-    nav:nth-child(2) {
-        justify-self: right;
-    }
-
-    nav a button {
-        border: 1px solid white;
-        padding: 0.5em;
-        width: 5em;
-        border-radius: 2em;
-        text-transform: capitalize;
-    }
-
-    nav ul {
-        display: flex;
-    }
-
-    .nav-links {
-        gap: 1em;
-    }
-
-    footer {
-        text-align: center;
-    }
-
-    footer a {
-        color: lightseagreen;
-    }
-
-    footer a:hover {
-        color: rgb(40, 221, 212);
-    }
-
-
-
-    button {
-        border: none;
-        color: azure;
-        background-color: transparent;
-        width: fit-content;
-    }
-
-
-    .fa-heart {
-        color: RED;
-    }
-</style>
 
 </html>
