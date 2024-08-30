@@ -107,17 +107,17 @@
 
 <script>
     // This function checks if the current URL matches a file in your project.
-    function handle404() {
-        const validPaths = ['', '/', '/index.html', '/about.html', '/contact.html']; // List all valid paths here
-        const path = window.location.pathname;
-        console.log("Path is:", path)
+    // function handle404() {
+    //     const validPaths = ['', '/', '/index.html', '/about.html', '/contact.html']; // List all valid paths here
+    //     const path = window.location.pathname;
+    //     console.log("Path is:", path)
 
-        if (!validPaths.includes(path)) {
-            window.location.href = '/404.html'; // Redirect to the custom 404 page
-        }
-    }
-    // Call the function to handle 404
-    handle404();
+    //     if (!validPaths.includes(path)) {
+    //         window.location.href = '/404.html'; // Redirect to the custom 404 page
+    //     }
+    // }
+    // // Call the function to handle 404
+    // handle404();
 </script>
 
 </html>
