@@ -20,6 +20,8 @@ body {
     background-image: url("./assets/images/124549.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    max-width: 1280px;
+    margin: 0 auto;
     /* background-color: rgb(23, 22, 22); */
     color: #f0ffff;
     padding: 1em 8em;
