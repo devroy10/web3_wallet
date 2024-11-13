@@ -20,18 +20,30 @@ document.addEventListener("DOMContentLoaded", () => {
       content.classList.add("hidden"); // Hide content initially
     }
 
+    // Immediately hide the loading screen and show the content
+    if (loadingScreen) {
+      loadingScreen.style.display = "none";
+    }
+    if (content) {
+      content.classList.remove("hidden");
+      content.style.display = "block";
+    }
+
+    // Mark the page as loaded in session storage
+    sessionStorage.setItem("pageLoaded", "true");
+
     // Allow time for the fade-out to complete before removing the loading screen
-    setTimeout(() => {
-      if (loadingScreen) {
-        loadingScreen.style.display = "none"; // Remove loading screen after fade-out
-      }
-      if (content) {
-        content.classList.remove("hidden"); // Show the content
-        content.style.display = "block"; // Show the content
-      }
-      // Mark the page as loaded in session storage
-      sessionStorage.setItem("pageLoaded", "true");
-    }, 1300); // Match this duration to the CSS transition duration
+    // setTimeout(() => {
+    //   if (loadingScreen) {
+    //     loadingScreen.style.display = "none"; // Remove loading screen after fade-out
+    //   }
+    //   if (content) {
+    //     content.classList.remove("hidden"); // Show the content
+    //     content.style.display = "block"; // Show the content
+    //   }
+    //   // Mark the page as loaded in session storage
+    //   sessionStorage.setItem("pageLoaded", "true");
+    // }, 1300); // Match this duration to the CSS transition duration
   } else {
     // If it's not the first load, show content directly
     if (loadingScreen) {
